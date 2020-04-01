@@ -47,6 +47,7 @@ yargs.command({
     handler() {
         notes.getNotes();
         
+        // Alternate: 
         // const arr = notes.getNotes();
         // if (arr.length === 0) {
         //     console.log(error("Notes file empty"));
@@ -69,15 +70,19 @@ yargs.command({
         }
     },
     handler(argv) {
-        const note = notes.getNote(argv.title);
+        notes.getNote(argv.title);
 
-        if (note === null) {
-            console.log(error("No such note found!"));
-        }
-        else {
-            console.log(success("Note found! Your note is: "));
-            console.log(note);
-        }
+        // Alternate: 
+        // const note = notes.getNote(argv.title);
+
+        // if (note === null) {
+        //     console.log(error("No such note found!"));
+        // }
+        // else {
+        //     console.log(success("Note found! Your note is: "));
+        //     console.log("Title: " + note.title);
+        //     console.log("Body: " + note.body);
+        // }
     }
 });
 

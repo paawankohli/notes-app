@@ -18,7 +18,7 @@ const loadNotes = () => {
         // console.log("File didnt exist! Creating a file....");
         return [];
     }
-}
+};
 
 // storeNotes(data) to data.json
 const storeNotes = (data) => {
@@ -34,12 +34,14 @@ const getNote = (title) => {
     const notes = loadNotes().filter((note) => note.title === title);
 
     if (notes.length === 0) {
-        return null;
+        console.log(error("No such note found!"));
     }
     else {
-        return notes[0];
+        console.log(success("Note found! Your note is: "));
+        console.log("Title: " + notes[0].title);
+        console.log("Body: " + notes[0].body);
     }
-}
+};
 
 // adds the given note
 const addNote = (title, body) => {
@@ -77,7 +79,7 @@ const removeNote = (title) => {
     }
 
     storeNotes(omitted);
-}
+};
 
 // returns all notes as array
 const getNotes = () => {
@@ -93,13 +95,11 @@ const getNotes = () => {
     notes.forEach((note) => {
         console.log(note.title);
     })
-}
-
-loadNotes();
+};
 
 module.exports = {
     getNote: getNote,
     addNote: addNote,
     removeNote: removeNote,
     getNotes: getNotes
-}
+};
