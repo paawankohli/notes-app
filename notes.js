@@ -31,15 +31,21 @@ const storeNotes = (data) => {
 
 // return a single object, note with the given title
 const getNote = (title) => {
-    const notes = loadNotes().filter((note) => note.title === title);
 
-    if (notes.length === 0) {
+    // Using filter method:
+    // const notes = loadNotes().filter((note) => note.title === title);
+
+    // using find method:
+    const note = loadNotes().find( (note) => note.title === title);
+
+
+    if (note === undefined) {
         console.log(error("No such note found!"));
     }
     else {
         console.log(success("Note found! Your note is: "));
-        console.log("Title: " + notes[0].title);
-        console.log("Body: " + notes[0].body);
+        console.log("Title: " + note.title);
+        console.log("Body: " + note.body);
     }
 };
 
