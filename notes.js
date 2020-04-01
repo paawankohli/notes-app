@@ -46,11 +46,14 @@ const getNote = (title) => {
 // adds the given note
 const addNote = (title, body) => {
     const notes = loadNotes();
+    
+    // duplicates array contains notes which have the same title as note to be added
+    // const duplicates = notes.filter((note) => note.title === title);
+    
+    // duplicate contains note with the same title as to be added. More efficient than above used filter method
+    const duplicate = notes.find( (note) => note.title === title);
 
-    // duplicate array contains notes which have the same title as note to be added
-    const duplicate = notes.filter((note) => note.title === title);
-
-    if (duplicate.length === 0) {
+    if (duplicate === undefined) {
         notes.push({
             title: title,
             body: body
