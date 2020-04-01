@@ -3,7 +3,7 @@
 Repo for my first node.js app for taking notes;
 
 ### List of commands:
-add --title="sample title" --body="sample body"
-remove --title="sample title"
-list 
-read --title="sample title"
+add --title="sample title" --body="sample body" <br/>
+remove --title="sample title" <br/>
+list <br/>
+read --title="sample title" <br/>
