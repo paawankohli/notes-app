@@ -6,9 +6,6 @@ const chalk = require('chalk');
 const error = chalk.red.inverse;
 const success = chalk.green.inverse;
 
-
-
-
 // loadNotes() from data.json
 const loadNotes = () => {
     try {
@@ -25,10 +22,6 @@ const storeNotes = (data) => {
     fs.writeFileSync("data.json", JSONify(data));
 };
 
-
-
-
-
 // return a single object, note with the given title
 const getNote = (title) => {
 
@@ -37,8 +30,7 @@ const getNote = (title) => {
 
     // using find method:
     const note = loadNotes().find( (note) => note.title === title);
-
-
+    
     if (note === undefined) {
         console.log(error("No such note found!"));
     }
@@ -106,6 +98,8 @@ const getNotes = () => {
     })
 };
 
+
+// export to app.js
 module.exports = {
     getNote: getNote,
     addNote: addNote,
