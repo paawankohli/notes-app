@@ -1,6 +1,6 @@
 # notes-app
 
-Repo for my first node.js app for taking notes;
+Repo for my first node.js app for taking notes!
 
 ## List of commands:
 
