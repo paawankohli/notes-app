@@ -3,16 +3,15 @@
 Repo for my first node.js app for taking notes;
 
 ## List of commands:
-<br/>
 
-## To add a note
+#### To add a note
 ```add --title="sample title" --body="sample body"``` <br/>
 
-## To remove a note
+#### To remove a note
 ```remove --title="sample title"``` <br/>
 
-## To list all notes
+#### To list all notes
 ```list``` <br/>
 
-## To read a note
+#### To read a note
 ```read --title="sample title"``` <br/>
