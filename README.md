@@ -5,13 +5,13 @@ Repo for my first node.js app for taking notes;
 ## List of commands:
 
 #### To add a note
-```add --title="sample title" --body="sample body"``` <br/>
+```node app.js add --title="sample title" --body="sample body"``` <br/>
 
 #### To remove a note
-```remove --title="sample title"``` <br/>
+```node app.js remove --title="sample title"``` <br/>
 
 #### To list all notes
-```list``` <br/>
+```node app.js list``` <br/>
 
 #### To read a note
-```read --title="sample title"``` <br/>
+```node app.js read --title="sample title"``` <br/>
